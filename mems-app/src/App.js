@@ -5,10 +5,10 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import HotMems from "./pages/HotMems";
-import Mems from "./pages/Mems";
+import Memy from "./pages/Memy";
 import Navbar from "./pages/Navbar";
 import Page404 from "./pages/Page404";
+import PopularneMemy from "./pages/PopularneMemy";
 
 class App extends React.Component {
   render() {
@@ -19,13 +19,13 @@ class App extends React.Component {
           <div className="Routes">
             <Switch>
             <Route exact path="/">
-            <Redirect to="/Mems" />
+            <Redirect to="/Memy" />
             </Route>
-            <Route path="/Mems">
-                <Mems />
+            <Route path="/Memy">
+                <Memy />
               </Route>
-              <Route path="/HotMems">
-                <HotMems />
+              <Route path="/PopularneMemy">
+                <PopularneMemy />
               </Route>
               <Route path="*">
                 <Page404 />

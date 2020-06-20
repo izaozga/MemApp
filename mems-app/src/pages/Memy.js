@@ -1,13 +1,13 @@
 import React from "react";
 
-class Mems extends React.Component {
+class Memy extends React.Component {
     render() {
       return (
         <div>
-          <h1> O to fajne memy! </h1>
+          <h1> Oto fajne memy! </h1>
         </div>
       );
     }
   }
   
-  export default Mems;
+  export default Memy;
