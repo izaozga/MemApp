@@ -1,22 +1,44 @@
 import React from "react";
 
 class MemList extends React.Component {
-
     state = {
-        pictures: [
-            { title: "Piękny język polski", upvotes: 6, downvotes: 0, img: "../assets/BeatifullPolishLanguage.jpg" },
-            { title: "Smuteczek", upvotes: 4, downvotes: 0, img: "../assets/Depression.jpg" },
-            { title: "Oto jest pytanie!", upvotes: 7, downvotes: 2, img: "../assets/Kulfon.jpeg" },
-            { title: "Już wiesz?", upvotes: 2, downvotes: 3, img: "../assets/Mask.jpg" },
-            { title: "Do przemyślenia!", upvotes: 8, downvotes: 0, img: "../assets/TheBestThings.jpg" },
-            { title: "Portret kobiety z klasą", upvotes: 6, downvotes: 1, img: "../assets/WomanAndClass.jpg" }
-        ]
-    }
 
+        elements: [
+            {
+                title: "Piękny język polski",
+                img: "../Gallery/BeatifullPolishLanguage.jpg"
+            },
+            {
+                title: "Smuteczek",
+                img: "../Gallery/Depression.jpg"
+            },
+            {
+                title: "Oto jest pytanie!",
+                img: "../Gallery/Kulfon.jpeg"
+            },
+            {
+                title: "Już wiesz?",
+                img: "../Gallery/Mask.jpg"
+            },
+            {
+                title: "Do przemyślenia!",
+                img: "../Gallery/TheBestThings.jpg"
+            },
+            {
+                title: "Portret kobiety z klasą",
+                img: "../Gallery/WomanAndClass.jpg"
+            },
+
+        ]
+
+    }
     render() {
+        let elements = this.state.elements.map(e => {
+            return <div key={e.title}>{e.title}</div>
+        })
         return (
             <div>
-
+                {elements}
             </div>
         )
     }
