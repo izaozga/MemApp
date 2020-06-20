@@ -1,7 +1,7 @@
 import React from "react";
 
 
-class PopularneMemy extends React.Component {
+class HotMems extends React.Component {
     render() {
       return (
         <div>
@@ -11,4 +11,4 @@ class PopularneMemy extends React.Component {
     }
   }
   
-  export default PopularneMemy;
+  export default HotMems;

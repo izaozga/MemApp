@@ -1,6 +1,6 @@
 import React from "react";
 
-class Memy extends React.Component {
+class Mems extends React.Component {
     render() {
       return (
         <div>
@@ -10,4 +10,4 @@ class Memy extends React.Component {
     }
   }
   
-  export default Memy;
+  export default Mems;
