@@ -1,13 +1,14 @@
 import React from "react";
-import MemList from "../Components/MemList"
+import MemList from "../Components/MemList";
 
 class Memy extends React.Component {
 
   render() {
     return (
       <div>
-        <h1> Oto nasze memy </h1>
+        <h1> Poznajcie nasze memy! </h1>
         <MemList />
+      
       </div>)
   }
 }

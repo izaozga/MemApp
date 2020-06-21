@@ -1,47 +1,91 @@
 import React from "react";
+import BeatifullPolishLanguage from "../Gallery/BeatifullPolishLanguage.jpg";
+import Depression from "../Gallery/Depression.jpg";
+import Kulfon from "../Gallery/Kulfon.jpeg";
+import Mask from "../Gallery/Mask.jpg";
+import TheBestThings from "../Gallery/TheBestThings.jpg";
+import WomanAndClass from "../Gallery/WomanAndClass.jpg";
+
+
+
+const ListOfMems = (props) => {
+
+    return (
+        <li>
+            <div>
+                
+                <div>{props.title}</div>
+                <div>{props.img}</div>
+                
+            </div>
+
+            <button> Lubię to! </button>
+            <button> Nie lubię tego! </button>
+        </li>
+    )
+}
 
 class MemList extends React.Component {
     state = {
 
         elements: [
             {
+                id: 1,
                 title: "Piękny język polski",
-                img: "../Gallery/BeatifullPolishLanguage.jpg"
+                img: <img alt="Wyraz dżdżownica w kilku językach" src={BeatifullPolishLanguage} />,
+                vote: 0
+                
             },
             {
-                title: "Smuteczek",
-                img: "../Gallery/Depression.jpg"
-            },
+                id: 2,
+                title: "Smuteczek :-(",
+                img: <img alt="Zakaz narzekania" src={Depression} />,
+                vote: 0,
+                
+            }, 
             {
+                id: 3,
                 title: "Oto jest pytanie!",
-                img: "../Gallery/Kulfon.jpeg"
+                img:  <img alt="Kulfon sprawdza, co z nas wyrosło" src={Kulfon} />,
+                vote: 0
             },
             {
+                id: 4,
                 title: "Już wiesz?",
-                img: "../Gallery/Mask.jpg"
+                img:  <img alt="Powód noszenia maseczki" src={Mask} />,
+                vote: 0
+
             },
             {
+                id: 5,
                 title: "Do przemyślenia!",
-                img: "../Gallery/TheBestThings.jpg"
+                img: <img alt="Lista ważnych rzeczy, które są za darmo" src={TheBestThings} />,
+                vote: 0
+
             },
             {
-                title: "Portret kobiety z klasą",
-                img: "../Gallery/WomanAndClass.jpg"
+                id: 6,
+                title: "To jest kobieta z klasą!",
+                img:  <img alt="Portret kobiety z klasą" src={WomanAndClass} />,
+                vote: 0
             },
 
         ]
 
     }
     render() {
-        let elements = this.state.elements.map(e => {
-            return <div key={e.title}>{e.title}</div>
-        })
         return (
-            <div>
-                {elements}
-            </div>
+            <ul> 
+                {this.state.elements.map(listOfMems => <ListOfMems key = {listOfMems.id}
+                title = {listOfMems.title}
+                img = {listOfMems.img}
+                
+                />)}
+            </ul>
         )
     }
+
 }
+
 
 export default MemList
