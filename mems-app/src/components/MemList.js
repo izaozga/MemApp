@@ -30,41 +30,35 @@ class MemList extends React.Component {
 
         elements: [
             {
-                id: 1,
                 title: "Piękny język polski",
                 img: <img alt="Wyraz dżdżownica w kilku językach" src={BeatifullPolishLanguage} />,
                 vote: 0
                 
             },
             {
-                id: 2,
                 title: "Smuteczek :-(",
                 img: <img alt="Zakaz narzekania" src={Depression} />,
                 vote: 0,
                 
             }, 
             {
-                id: 3,
                 title: "Oto jest pytanie!",
                 img:  <img alt="Kulfon sprawdza, co z nas wyrosło" src={Kulfon} />,
                 vote: 0
             },
             {
-                id: 4,
                 title: "Już wiesz?",
                 img:  <img alt="Powód noszenia maseczki" src={Mask} />,
                 vote: 0
 
             },
             {
-                id: 5,
                 title: "Do przemyślenia!",
                 img: <img alt="Lista ważnych rzeczy, które są za darmo" src={TheBestThings} />,
                 vote: 0
 
             },
             {
-                id: 6,
                 title: "To jest kobieta z klasą!",
                 img:  <img alt="Portret kobiety z klasą" src={WomanAndClass} />,
                 vote: 0
@@ -76,7 +70,7 @@ class MemList extends React.Component {
     render() {
         return (
             <ul> 
-                {this.state.elements.map(listOfMems => <ListOfMems key = {listOfMems.id}
+                {this.state.elements.map(listOfMems => <ListOfMems key = {listOfMems.title}
                 title = {listOfMems.title}
                 img = {listOfMems.img}
                 
