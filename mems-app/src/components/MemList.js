@@ -13,12 +13,17 @@ import WomanAndClass from "../Gallery/WomanAndClass.jpg";
 
 
 class MemList extends React.Component {
-    constructor(props) {
-        super(props);
-
+    clickedLike() {
+        console.log("Polubiono")
     }
 
+    clickedUnlike() {
+        console.log("Odebrano głos")
+    }
+
+
     state = {
+
 
 
         elements: [
@@ -49,7 +54,7 @@ class MemList extends React.Component {
             {
                 title: "Do przemyślenia!",
                 img: <img alt="Lista ważnych rzeczy, które są za darmo" src={TheBestThings} />,
-                votes: 0
+                votes: 0,
 
             },
             {
@@ -58,35 +63,47 @@ class MemList extends React.Component {
                 votes: 0
             },
 
-        ]
+
+        ],
 
     }
 
-
     render() {
-        const photoMems = this.state.elements.map(e => {
-            return (
-                <ul key={e.title}>
-                    <div>{e.title}</div>
-                    <div>{e.img} </div>
 
-                    <div>
-                        <div><button>Lubię to!</button></div>
-                        <div>{e.votes}</div>
-                        <div><button>Nie lubię tego!</button></div>
+
+
+
+        const photoMems = this.state.elements.map(e => {
+
+
+            return (
+
+                <div key={e.title}>
+                    <div>{e.title}</div>
+                    {e.img}
+
+                    
+                        <button onClick={this.clickedLike}>Lubię to!</button>
+                        {e.votes}
+                        <button onClick={this.clickedUnlike}>Nie lubię tego!</button>
                     </div>
-                </ul>
+                
+
+
+
+
             )
         })
 
+
+
         return (
-            <ul>
+            <div>
                 {photoMems}
 
-            </ul>
+            </div>
         )
     }
-
 }
 
 
