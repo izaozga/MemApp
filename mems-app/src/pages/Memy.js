@@ -1,5 +1,5 @@
 import React from "react";
-import MemList from "../Components/MemList";
+import MemList from "../components/memList";
 
 class Memy extends React.Component {
 
