@@ -5,7 +5,7 @@ class PopularneMemy extends React.Component {
     render() {
       return (
         <div>
-          <h1> A te najbardziej lubicie! </h1>
+          <h1> A te memy najbardziej lubicie! </h1>
         </div>
       );
     }
