@@ -9,12 +9,13 @@ import Memy from "./pages/Memy";
 import Navbar from "./pages/Navbar";
 import Page404 from "./pages/Page404";
 import PopularneMemy from "./pages/PopularneMemy";
-
+import "./App.css";
 
 
 class App extends React.Component {
   render() {
     return (
+      
       <div className="App">
         <Router>
         <Navbar />
@@ -36,14 +37,14 @@ class App extends React.Component {
           </div>
         </Router>
       </div>
+      
     );
+  
   }
+  
 }
 
 
         
-
-
-
 
 export default App;

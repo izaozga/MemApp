@@ -14,7 +14,7 @@ class Memy extends React.Component {
         <h1> Poznajcie nasze memy! </h1>
         <MemList />
 
-      this.popular().map(
+      
       </div>)
   }
 }

@@ -6,11 +6,11 @@ class Navbar extends React.Component {
         return (
 
             <div className="Navbar">
-                <ul>
-                    <li>
+                <ul className = "Listnavbar">
+                    <li className = "Link">
                         <NavLink to="Memy"> Memy </NavLink>
                     </li>
-                    <li>
+                    <li className = "Link">
                         <NavLink to="PopularneMemy"> Popularne memy </NavLink>
                     </li>
                 </ul>
