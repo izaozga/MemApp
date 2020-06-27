@@ -101,7 +101,7 @@ class MemList extends React.Component {
       )
     })
 
-    return <ul>{Mems}</ul>
+    return <ul className = "Memslist">{Mems}</ul>
   }
 }
 

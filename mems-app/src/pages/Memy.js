@@ -12,7 +12,7 @@ class Memy extends React.Component {
 
 
     return (
-      <div>
+      <div className = "MemList">
         <h1> Poznajcie nasze memy! </h1>
 
 

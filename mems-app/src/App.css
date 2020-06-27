@@ -1,6 +1,6 @@
 * {
-  margin: 0;
-  padding: 0;
+  margin: 15px;
+  padding: 20px;
   box-sizing: border-box;
 }
 
@@ -42,4 +42,8 @@ a:hover {
 
 html {
   font-family: "opens-sans", sans-serif;
+}
+.Routes {
+  margin: 15px,
+ 
 }
